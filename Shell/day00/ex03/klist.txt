@@ -1,0 +1,5 @@
+Credentials cache: API:57305
+        Principal: adrossig@S19.BE
+
+		  Issued                Expires               Principal
+		  Jul  1 10:55:13 2019  Jul  1 20:55:06 2019  krbtgt/S19.BE@S19.BE
