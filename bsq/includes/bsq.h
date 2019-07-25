@@ -6,7 +6,7 @@
 /*   By: adrossig <adrossig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/22 09:07:46 by adrossig          #+#    #+#             */
-/*   Updated: 2019/07/23 23:21:40 by adrossig         ###   ########.fr       */
+/*   Updated: 2019/07/24 15:27:12 by adrossig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 
 # define TRUE 1
 # define FALSE 0
+# define BUFF_SIZE 32000 
 
 typedef int		t_bool;
 
@@ -46,9 +47,11 @@ void			ft_putchar(char c);
 void			ft_putstr(char *str);
 int				ft_strlen(char *str);
 int				ft_atoi(char *str);
+int				ft_buf_size(int fd);
+int				ft_reopen(char *filename, int fd);
 char			*ft_strcpy(char *dest, char *src);
 char			*ft_strndup(char *src, unsigned int	n);
-char			*ft_input(int fd);
+char			*ft_input(int fd, int count);
 char			*ft_read_file(char *filename);
 void			ft_bsq(char *buffer, t_bool *error);
 void			ft_find_bigger_square(t_grid *grid);

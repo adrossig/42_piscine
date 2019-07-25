@@ -6,12 +6,12 @@
 #    By: adrossig <adrossig@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/20 22:31:15 by adrossig          #+#    #+#              #
-#    Updated: 2019/07/23 21:01:49 by adrossig         ###   ########.fr        #
+#    Updated: 2019/07/25 11:38:32 by adrossig         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=gcc
-FLAGS= -Werror -Wall -Wextra
+FLAGS=-Werror -Wall -Wextra
 HEADER_FOLDER=includes
 NAME=bsq
 SRCS=./srcs/main.c \
@@ -30,7 +30,8 @@ SRCS=./srcs/main.c \
     	./srcs/libs/ft_putstr.c \
     	./srcs/libs/ft_atoi.c \
     	./srcs/libs/ft_strlen.c \
-    	./srcs/libs/ft_strndup.c
+    	./srcs/libs/ft_strndup.c \
+		./srcs/libs/ft_buf_size.c
 	
 OBJECTS=./srcs/main.o \
 		./srcs/grid/ft_remove_grid.o \
@@ -48,7 +49,8 @@ OBJECTS=./srcs/main.o \
     	./srcs/libs/ft_putstr.o \
     	./srcs/libs/ft_atoi.o \
     	./srcs/libs/ft_strlen.o \
-    	./srcs/libs/ft_strndup.o
+    	./srcs/libs/ft_strndup.o \
+		./srcs/libs/ft_buf_size.o
 
 all: $(NAME)
 
