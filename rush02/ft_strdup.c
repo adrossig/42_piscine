@@ -5,26 +5,33 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrossig <adrossig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/20 11:57:45 by adrossig          #+#    #+#             */
-/*   Updated: 2019/07/20 15:07:03 by adrossig         ###   ########.fr       */
+/*   Created: 2019/07/21 21:32:47 by adrossig          #+#    #+#             */
+/*   Updated: 2019/07/21 22:39:06 by adrossig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft.h"
+#include "rush02.h"
 
-char	*ft_strdup(char *src)
+char	**ft_strdup_new(char *str, int i, char **tab, char *cs)
 {
-	char	*locma;
-	int		i;
+	int		j;
+	int		word_len;
 
-	i = 0;
-	if (!(locma = (char *)malloc(ft_strlen(src) + 1)))
-		return (NULL);
-	while (src[i])
+	word_len = 0;
+	j = 0;
+	while (!(is_charset(str[j], cs)) && str[j])
 	{
-		locma[i] = src[i];
-		i++;
+		word_len++;
+		j++;
 	}
-	locma[i] = '\0';
-	return (locma);
+	if ((tab[i] = (char *)malloc((word_len + 1) * sizeof(char))) == NULL)
+		return (NULL);
+	j = 0;
+	while (!(is_charset(str[j], cs)) && str[j])
+	{
+		tab[i][j] = str[j];
+		j++;
+	}
+	tab[i][j] = 0;
+	return (tab);
 }

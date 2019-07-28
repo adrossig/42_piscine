@@ -5,23 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: adrossig <adrossig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/20 09:21:50 by adrossig          #+#    #+#             */
-/*   Updated: 2019/07/20 17:31:06 by adrossig         ###   ########.fr       */
+/*   Created: 2019/07/21 20:36:31 by adrossig          #+#    #+#             */
+/*   Updated: 2019/07/21 22:39:55 by adrossig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft.h"
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+#include "rush02.h"
 
 void	ft_putstr(char *str)
 {
-	int temp;
+	int		i;
 
-	temp = 0;
-	while (str[temp])
-		ft_putchar(str[temp++]);
+	i = 0;
+	while (str[i])
+		write(1, &str[i++], 1);
 }
